@@ -1,0 +1,16 @@
+applications:
+  - name: apm-analysis-ui3-qa
+    host: apm-analysis-ui3-qa
+    path: ./dist/apm-analysis-microapp-3.0.0-SNAPSHOT.zip
+    domain: int-app.aws-usw02-pr.predix.io
+    buildpack: https://github.com/gedigital-apm/nodejs-buildpack
+    memory: 4G
+    instances: 2
+    disk_quota: 2G
+    command: node ./server/server.js
+    stack: cflinuxfs2
+    services:
+      - stuf
+      - apm-view-proxy
+      - avid-apm-asset
+      - avid-apm-timeseries-services

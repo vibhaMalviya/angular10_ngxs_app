@@ -1,0 +1,18 @@
+@import "px-colors-settings";
+
+.header-item {
+  display: inline-block;
+}
+.view-name {
+  margin-left: 50px;
+}
+.header-label {
+  display: block;
+  font-size: 12px;
+  color: $gray14;
+}
+
+.header-value {
+  font-size: 15px;
+  color: $gray18;
+}

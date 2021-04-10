@@ -1,0 +1,35 @@
+@import 'px-colors-settings';
+
+:host {
+  width: 100%;
+  height: 100%;
+  font-family: "GE Inspira Sans", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: $gray18;
+}
+
+.chart_container {
+  width: 100%;
+  height: 450px;
+}
+/*.overlay {
+  background-color: #CAC6C4;
+  z-index: 2;
+}*/
+
+.overlay {
+  background-color: $neutral-gray1;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chart-handle {
+  left: 4px;
+  top: 10px;
+  font-size: 18px;
+  line-height: 19px;
+  cursor: move;
+}

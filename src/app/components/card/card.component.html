@@ -1,0 +1,33 @@
+<h4 id="cardTitle" class="cardHeader">{{ card?.title }}</h4>
+<dx-sortable
+        *ngIf="this.card && this.card.charts.length; else chartSelector"
+        id="chart-ws-sort-area"
+        [allowDropInsideItem]="false"
+        [allowReordering]="true"
+        [autoScroll]="true"
+        data="charts"
+        filter="app-chart > .chart-wrapper"
+        dropFeedbackMode="indicate"
+        group="chartsGroup"
+        itemOrientation="vertical"
+        dragDirection="both"
+        boundary="sortable-list"
+        [scrollSpeed]="30"
+        [scrollSensitivity]="60"
+        (onDragEnd)="onChartDragEnd($event)">
+    <div class="sortable-list">
+        <div *ngFor="let chart of card?.charts">
+            <app-chart [chart]="chart"></app-chart>
+        </div>
+    </div>
+</dx-sortable>
+<ng-template #chartSelector>
+    <div class="chartSelectorContainer">
+        <dx-drop-down-button
+                text="Select Chart Type"
+                [dropDownOptions]="{ width: 230 }"
+                [items]="['Timeseries Chart']"
+                (onItemClick)="onChartTypeSelection($event)">
+        </dx-drop-down-button>
+    </div>
+</ng-template>

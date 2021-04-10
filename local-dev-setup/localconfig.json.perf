@@ -1,0 +1,118 @@
+{
+  "tenant": {
+    "tenancyMode": "single",
+    "singleTenant" : {
+      "id": "local-single-tenant-mode",
+      "uaaServer": "https://c9e1bc59-b0d9-482f-ba4e-331d4d8ca3f4.predix-uaa.run.aws-usw02-pr.ice.predix.io",
+      "uaaClientId": "webapp.38fa6fb0-4949-43e4-876d-7de130cb74b7.d3c0788d-40f2-411b-92f7-3eaf337ec01c",
+      "uaaClientSecret": "13u6a346rtvaikv5ib9q53sddx8mjs18f3vi7u",
+      "configServiceHost": "http://localhost:3001",
+      "route": "localhost",
+      "contextPath": "",
+      "serverURL": "http://localhost:3000",
+      "customHeader": {
+        "tenant": "bdbdd22f-79a8-4129-a682-35b7e355f306",
+        "ingestion": "bdbdd22f-79a8-4129-a682-35b7e355f306"
+      }
+    },
+    "hubConfigService": "https://hubs-apphub-config-manager-dev.grc-apps.svc.ice.ge.com"
+  },
+  "config": {
+  "userInterfaceResources": [
+                  "ui_add_timeseries",
+                  "ui_create_notes",
+                  "ui_edit_disposition",
+                  "ui_create_system_analysis",
+                  "ui_edit_tags",
+                  "ui_edit_notes",
+                  "ui_filtering",
+                  "ui_view_evidence",
+                  "ui_view_dashboard",
+                  "ui_configure_datasources_timeseries",
+                  "ui_delete_notes",
+                  "ui_view_datasources_timeseries",
+                  "ui_process_cases",
+                  "ui_view_assets",
+                  "ui_default",
+                  "ui_default_dashboard_class",
+                  "ui_alerts",
+                  "ui_create_dashboard",
+                  "ui_create_analysis",
+                  "ui_edit_alert_action",
+                  "ui_update_dashboard",
+                  "ui_default_dashboard_instance",
+                  "ui_notes",
+                  "ui_edit_assets",
+                  "ui_read_configuration",
+                  "ui_create_evidence",
+                  "ui_view_limited_visibility_alerts",
+                  "ui_view_analysis_evidence",
+                  "ui_view_analysis",
+                  "ui_manage_configuration",
+                  "ui_view_case",
+                  "ui_delete_tags",
+                  "ui_process_analysis_evidence",
+                  "um_md_manager",
+                  "ui_browse_assets",
+                  "ui_link_analysis",
+                  "ui_create_alert",
+                  "ui_view_notes",
+                  "ui_profiles",
+                  "ui_link_asset",
+                  "ui_view_timeseries",
+                  "ui_view_disposition",
+                  "ui_create_case",
+                  "ui_class_dashboard",
+                  "ui_attachments",
+                  "ui_edit_alert_action",
+                  "Manage Products"
+             ],
+    "name":"APM",
+    "user": {
+      "name": "Edison1879",
+      "firstName": "Thomas",
+      "lastName": "Edison",
+      "picture": "/ui-hub-assets/images/avatar.jpg"
+    },
+	"preferences-old": {
+	  "preferredLocale": "en-US"
+	},
+	"preferences": {
+	    "SystemOfMeasure": "None",
+        "TimeZone": "Etc/GMT",
+          "preferredLocale": "en-US",
+          "SmartSignalMarkerConfigTenantPref": {},
+          "SmartSignalMarkerVisibilityUserPref": {}
+    	},
+    "apps":[
+      {
+          "id":"analysismicroapp3",
+          "host":"http://localhost:9042",
+          "path":"/analysisV3",
+          "template":"/index.html",
+          "navService":"/nav.json",
+          "default": true
+        },
+        {
+           "id":"analysismicroapp",
+            "host":"https://apm-analysis-ui-rc.int-app.aws-usw02-pr.predix.io",
+            "path":"/analysis",
+            "template":"/index.html",
+            "navService":"/nav/nav.json"
+        },
+        {
+            "id":"Alerts",
+            "host":"https://apm-alarms-v2-ui-rc.int-app.aws-usw02-pr.predix.io",
+            "path":"/alerts",
+            "template":"/index.html",
+            "navService":"/nav/nav.json",
+            "items":[
+              {
+                "label": "Alerts",
+                "icon": "fa-warning",
+                "path": "/alerts/#"
+              }]
+      }
+    ]
+  }
+}

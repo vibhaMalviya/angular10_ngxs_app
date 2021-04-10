@@ -1,0 +1,38 @@
+@import "px-colors-settings.scss";
+
+
+div.svg-icon:hover {
+    stroke: $gray18;
+}
+
+div.svg-icon.button {
+    cursor: pointer;
+}
+
+div.svg-icon {
+    /* These seem like good defaults, feel free to add more classes in this file that override these for other styling that we get from UX. */
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+
+    stroke: $gray15;
+    fill: transparent;
+}
+
+div.svg-icon.expand-button {
+    height: 22px;
+    width: 22px;
+    vertical-align: text-bottom;
+    transform: rotate(-90deg);
+    stroke: $gray10;
+}
+
+div.svg-icon.expand-button:hover {
+    stroke: $d-actionable-default;
+}
+
+div.svg-icon.menu-button {
+    height: 22px;
+    width: 22px;
+}
+

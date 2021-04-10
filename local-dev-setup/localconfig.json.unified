@@ -1,0 +1,585 @@
+{
+  "tenant": {
+    "tenancyMode": "single",
+    "singleTenant": {
+      "id": "local-single-tenant-mode",
+      "uaaServer": "https://d1730ade-7c0d-4652-8d44-cb563fcc1e27.predix-uaa.run.aws-usw02-pr.ice.predix.io",
+      "uaaClientId": "webapp.496bb641-78b5-4a18-b1b7-fde29788db38.991e5c23-3e9c-4944-b08b-9e83ef0ab598",
+      "uaaClientSecret": "mijzqlhrvji83e581krorb5aovbsa1s4a15ob",
+      "configServiceHost": "http://localhost:3001",
+      "route": "localhost",
+      "contextPath": "/sample-u",
+      "serverURL": "http://localhost:3000",
+      "chromeless": true,
+      "customHeader": {
+        "foo": "bar",
+        "Cache-Control": "public, max-age=1209600",
+        "tenant": "b62476db-b64c-4255-9534-d91c0bfa8c98",
+        "alias": "sample-u"
+      }
+    },
+    "hubConfigService": "http://localhost:3004",
+    "searchPath": "/tenant"
+  },
+  "config": {
+    "name": "App Hub Demo",
+	"preferences": {
+	  "preferredLocale": "en-US"
+	},
+    "user": {
+      "name": "sample-unified-smokeuser",
+      "firstName": "sample2",
+      "lastName": "smokeuser",
+      "uuid": "5b97c6aa-1d7a-43f0-880d-7ff4e594f663",
+      "picture": "/ui-hub-assets/images/avatar.jpg",
+      "features": [
+        "View Assets",
+        "apm-default",
+        "View Assets Api",
+        "PDAnalysis2-View",
+        "Browse Assets Api",
+        "Ingest Assets",
+        "Process Analysis Evidence",
+        "View Analytics",
+        "Analysis-Create-Public-Template",
+        "Ingest Assets Api",
+        "Execute Analytic Feature",
+        "Setup SmartSignal Hosts",
+        "PDAnalysis2-View-System",
+        "PD Adhoc Analysis",
+        "Analytic Asset Applicability",
+        "PDAnalysis2-Create",
+        "Filtering",
+        "Manage Alerts and Notes",
+        "Analysis-Create",
+        "Edit-Alert-Template",
+        "Read Configuration",
+        "Read Case Templates",
+        "Class-Dashboard",
+        "Edit Access Control Resources",
+        "Setup SmartSignal Analytic",
+        "Case Templates",
+        "View Notes",
+        "View Timeseries",
+        "Configure Data Sources for Timeseries",
+        "Manage Alerts",
+        "Download Analytic Executable Feature",
+        "View Analysis Evidence",
+        "Alerts",
+        "Alert Templates",
+        "Help",
+        "View Alert Detail",
+        "Check Access Control Resources",
+        "Link-To-Assets",
+        "View-Alert-Template",
+        "View Attachments",
+        "Attachments",
+        "Setup SmartSignal Tenants",
+        "View Alert Detail and Notes",
+        "Dashboard-View",
+        "default",
+        "Default-Dashboard-Class",
+        "View Data Sources for Timeseries",
+        "Read Notes",
+        "Browse Assets",
+        "Manage Notes",
+        "Basic group info",
+        "Link-To-Cases",
+        "Ingest Assets(SANDBOX)",
+        "Notes",
+        "Manage Analytics catalog",
+        "Read Access Control Resources",
+        "Edit Notes",
+        "Link-To-Alarms",
+        "Analysis2-View",
+        "Dashboard-Update",
+        "PDAnalysis2-Update",
+        "Analytic Deploy",
+        "Manage Configuration",
+        "Edit Assets(SANDBOX)",
+        "Link-To-Analysis",
+        "PD Digital Power Plant",
+        "Edit Assets",
+        "Default-Dashboard-Instance",
+        "PDAnalysis2-Update-System",
+        "Edit Attachments",
+        "Setup SmartSignal Hosts and Tenants",
+        "Add Timeseries",
+        "Analytic Orchestration",
+        "PDAnalysis2-Create-System",
+        "Setup SmartSignal Evidence",
+        "Dashboard-Create",
+        "Edit Assets Api",
+        "Analysis2-Create",
+        "Analysis-View",
+        "Cases"
+      ],
+  "userInterfaceResources": [
+                  "ui_add_timeseries",
+                  "ui_create_notes",
+                  "ui_edit_disposition",
+                  "ui_create_system_analysis",
+                  "ui_edit_tags",
+                  "ui_edit_notes",
+                  "ui_filtering",
+                  "ui_view_evidence",
+                  "ui_view_dashboard",
+                  "ui_configure_datasources_timeseries",
+                  "ui_delete_notes",
+                  "ui_view_datasources_timeseries",
+                  "ui_process_cases",
+                  "ui_view_assets",
+                  "ui_default",
+                  "ui_default_dashboard_class",
+                  "ui_alerts",
+                  "ui_create_dashboard",
+                  "ui_create_analysis",
+                  "ui_edit_alert_action",
+                  "ui_update_dashboard",
+                  "ui_default_dashboard_instance",
+                  "ui_notes",
+                  "ui_edit_assets",
+                  "ui_read_configuration",
+                  "ui_create_evidence",
+                  "ui_view_limited_visibility_alerts",
+                  "ui_view_analysis_evidence",
+                  "ui_view_analysis",
+                  "ui_manage_configuration",
+                  "ui_view_case",
+                  "ui_delete_tags",
+                  "ui_process_analysis_evidence",
+                  "um_md_manager",
+                  "ui_browse_assets",
+                  "ui_link_analysis",
+                  "ui_create_alert",
+                  "ui_view_notes",
+                  "ui_profiles",
+                  "ui_link_asset",
+                  "ui_view_timeseries",
+                  "ui_view_disposition",
+                  "ui_create_case",
+                  "ui_class_dashboard",
+                  "ui_attachments",
+                  "ui_edit_alert_action",
+                  "Manage Products"
+             ]
+    },
+    "apps": [
+      {
+        "id": "local",
+        "host": "https://apm-meridium-ui-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/local",
+        "template": "/app-hub-template.html",
+        "navService": "/nav",
+        "default": true
+      },
+      {
+        "order": 10,
+        "id": "alarmsmicroapp",
+        "host": "https://apm-alarms-ui-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/alarms",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "Alerts",
+            "icon": "fa-warning",
+            "path": "/alarms/#",
+            "items": [
+              {
+                "label": "more filters",
+                "path": "javascript:window.openFilterModal()"
+              }
+            ]
+          }
+        ]
+      },
+      {
+              "order": 11,
+              "id": "alarmsmicroappV2",
+              "host": "https://apm-alarms-v2-ui-rc.int-app.aws-usw02-pr.predix.io",
+              "path": "/alertsV2",
+              "template": "/index.html",
+              "location": "main",
+              "default": true,
+              "items": [
+                {
+                  "label": "AlertsV2",
+                  "icon": "fa-warning",
+                  "path": "/alertsV2/#"
+                }
+              ]
+            },
+      {
+        "order": 20,
+        "id": "templatesmicroapp",
+        "host": "https://apm-templates-ui-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/templates",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "Templates",
+            "icon": "fa-file-text",
+            "path": "/templates/#",
+            "items": [
+              {
+                "label": "Alerts",
+                "path": "/templates/#/alerts"
+              },
+              {
+                "label": "Cases",
+                "path": "/templates/#/cases"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 30,
+        "id": "casesmicroapp",
+        "host": "https://apm-cases-ui-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/cases",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "Cases",
+            "icon": "fa-briefcase",
+            "path": "/cases/#/unclaimed",
+            "items": [
+              {
+                "label": "Unclaimed Cases",
+                "path": "/cases/#/unclaimed"
+              },
+              {
+                "label": "My Cases",
+                "path": "/cases/#/my"
+              },
+              {
+                "label": "Open Cases",
+                "path": "/cases/#/open"
+              },
+              {
+                "label": "Awaiting Cases",
+                "path": "/cases/#/awaiting"
+              },
+              {
+                "label": "Closed Cases",
+                "path": "/cases/#/closed"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 40,
+        "id": "analysismicroapp3",
+        "host": "http://localhost:9042",
+        "path": "/analysisV3",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "AnalysisV3",
+            "icon": "fa-area-chart fa",
+            "path": "/analysisV3/#"
+          }
+        ]
+      },
+      {
+          "order": 45,
+          "id": "analysismicroapp",
+          "host": "https://apm-analysis-ui-rc.int-app.aws-usw02-pr.predix.io",
+          "path": "/analysis",
+          "template": "/index.html",
+          "location": "main",
+          "items": [
+            {
+              "label": "Analysis",
+              "icon": "fa-area-chart fa",
+              "path": "/analysis/#"
+            }
+          ]
+        },
+      {
+        "order": 50,
+        "id": "dashboardmicroapp",
+        "host": "https://apm-dashboard-ui-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/dashboards",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "Dashboard",
+            "icon": "fa-dashboard fa",
+            "path": "/dashboards/#",
+            "items": [
+              {
+                "label": "Card Library",
+                "path": "/dashboards/#/cards"
+              },
+              {
+                "label": "Favorites",
+                "path": "/dashboards/#/favorites"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 60,
+        "id": "assetmanagement",
+        "host": "https://apm-dashboard-ui-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/assetMgmt",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "Assets",
+            "icon": "fa-cube",
+            "path": "/assetMgmt/#",
+            "items": [
+              {
+                "label": "Asset Instances",
+                "path": "/assetMgmt/#/assetMgmt"
+              },
+              {
+                "label": "Groups",
+                "path": "/assetMgmt/#/groups"
+              },
+              {
+                "label": "Classifications",
+                "path": "/assetMgmt/#/classifications"
+              },
+              {
+                "label": "Search",
+                "path": "/assetMgmt/#/search"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 61,
+        "id": "myassetmanagement",
+        "host": "https://apm-asset-rc.apm.aws-usw02-pr.predix.io",
+        "path": "/assetMgmt",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "Assets",
+            "icon": "fa-cube",
+            "path": "/assetMgmt/#",
+            "items": [
+              {
+                "label": "My Asset Instances",
+                "path": "/assetMgmt/#/assetMgmt"
+              },
+              {
+                "label": "Groups",
+                "path": "/assetMgmt/#/groups"
+              },
+              {
+                "label": "Classifications",
+                "path": "/assetMgmt/#/classifications"
+              },
+              {
+                "label": "Search",
+                "path": "/assetMgmt/#/search"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 70,
+        "id": "analyticsmicroapp",
+        "host": "https://apm-analytics-ui-rc.apm.aws-usw02-pr.predix.io",
+        "path": "/analytics",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "Analytics",
+            "icon": "fa-rocket",
+            "path": "/analytics/#",
+            "items": [
+              {
+                "label": "Asset Groups",
+                "path": "/analytics/#/assetApplicability"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 71,
+        "id": "orchestrationmicroapp",
+        "host": "https://apm-orchestration-ui-rc.apm.aws-usw02-pr.predix.io",
+        "path": "/orchestration",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "Analytic Orchestration",
+            "icon": "fa-sliders",
+            "path": "/orchestration/#"
+          }
+        ]
+      },
+      {
+        "order": 101,
+        "id": "link-to-alarms-microapp",
+        "host": "https://alarms-rc.apm.aws-usw02-pr.predix.io",
+        "path": "/link-to-alarms",
+        "template": "/index.html"
+      },
+      {
+        "order": 102,
+        "id": "link-to-analysis-microapp",
+        "host": "https://apm-analysis-ui-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/link-to-analysis",
+        "template": "/index.html"
+      },
+      {
+        "order": 103,
+        "id": "link-to-cases-microapp",
+        "host": "apm-cases-svc-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/link-to-cases",
+        "template": "/index.html"
+      },
+      {
+        "order": 104,
+        "id": "link-to-assets-microapp",
+        "host": "https://apm-asset-svc-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/link-to-assets",
+        "template": "/index.html"
+      },
+      {
+        "order": 110,
+        "id": "timeseriesmicroapp",
+        "host": "https://apm-timeseries-ui-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/datasources",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "Time Series Data Sources",
+            "icon": "fa-database fa",
+            "path": "/datasources/#"
+          }
+        ]
+      },
+      {
+        "order": 230,
+        "id": "dataIngestion",
+        "host": "https://apm-asset-ingestion-ui-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/dataIngestion",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "Asset Ingestion",
+            "icon": "fa-exchange",
+            "path": "/dataIngestion/#"
+          }
+        ]
+      },
+      {
+        "order": 231,
+        "id": "mydataIngestion",
+        "host": "apm-asset-ingestion-ui-rc.int-app.aws-usw02-pr.predix.io",
+        "path": "/dataIngestion",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "My Asset Ingestion",
+            "icon": "fa-exchange",
+            "path": "/dataIngestion/#"
+          }
+        ]
+      },
+      {
+        "order": 240,
+        "id": "ssHostMicroapp",
+        "host": "https://ss-admin-rc.apm.aws-usw02-pr.predix.io",
+        "path": "/ss-host",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "SmartSignal Hosts",
+            "icon": "fa-desktop",
+            "path": "/ss-host/#",
+            "items": [
+              {
+                "label": "Host Management",
+                "path": "/ss-host/#/hosts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 250,
+        "id": "ssTenantMicroapp",
+        "host": "https://ss-tenant-microapp-rc.apm.aws-usw02-pr.predix.io",
+        "path": "/ss-tenant",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "SmartSignal Tenant",
+            "icon": "fa-institution",
+            "path": "/ss-tenant/#",
+            "items": [
+              {
+                "label": "Tenant Management",
+                "path": "/ss-tenant/#/tenants"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 260,
+        "id": "ssAnalyticMicroapp",
+        "host": "https://ss-asset-rc.apm.aws-usw02-pr.predix.io",
+        "path": "/ss-analytic",
+        "template": "/index.html",
+        "location": "main",
+        "items": [
+          {
+            "label": "SmartSignal Mappings",
+            "icon": "fa-cubes",
+            "path": "/ss-analytic/#",
+            "items": [
+              {
+                "label": "Current Mappings",
+                "path": "/ss-analytic/#/currentmaps"
+              },
+              {
+                "label": "Upload Assets",
+                "path": "/ss-analytic/#/uploadassets"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "settings",
+        "location": "settings",
+        "path": "/settings",
+        "items": [
+          {
+            "label": "Help",
+            "path": "https://apm-application-help-rc.apm.aws-usw02-pr.predix.io"
+          }
+        ]
+      }
+    ]
+  }
+}

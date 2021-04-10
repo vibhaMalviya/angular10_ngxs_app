@@ -1,0 +1,42 @@
+*** Tenant ids to replace in localconfig file ***
+
+RC tenants:
+"rcsampleg3": "0a5c7fc9-4594-4b3f-bb62-4efdafa49412",
+"rcsampleg6": "68835588-3907-49b0-9d1f-18ae5b08c364",
+"rcsampleg5": "a6946219-395b-4b55-bb62-01ba594e7f87",
+"analysisssrc2": "7d1a5025-4d73-48a9-a40c-c093cff82e3c"
+
+QA tenant:
+"analysisqag": "2bcdb0d5-e95e-4fe5-b97a-1d979abca5d9"
+
+PERF tenant:
+"ingestion": "bdbdd22f-79a8-4129-a682-35b7e355f306"
+
+Unified RC tenant:
+"sample-u": "b62476db-b64c-4255-9534-d91c0bfa8c98"
+
+*** UAA details to replace in localconfig file ***
+RC tenants:
+"uaaServer": "https://d1730ade-7c0d-4652-8d44-cb563fcc1e27.predix-uaa.run.aws-usw02-pr.ice.predix.io",
+"uaaClientId": "webapp.496bb641-78b5-4a18-b1b7-fde29788db38.991e5c23-3e9c-4944-b08b-9e83ef0ab598",
+"uaaClientSecret": "mijzqlhrvji83e581krorb5aovbsa1s4a15ob"
+
+Rcsampleg5 UAA details since it has its own uaa.
+"uaaServer": "https://b40a92d1-c144-4459-8fc8-2af1d9fdcb06.predix-uaa.run.aws-usw02-pr.ice.predix.io",
+"uaaClientId": "webapp.496bb641-78b5-4a18-b1b7-fde29788db38.rcsampleg5",
+"uaaClientSecret": "6269j1bkcqnvonus5a11t3lf"
+
+QA tenants:
+"uaaServer": "https://d1730ade-7c0d-4652-8d44-cb563fcc1e27.predix-uaa.run.aws-usw02-pr.ice.predix.io",
+"uaaClientId": "webapp.496bb641-78b5-4a18-b1b7-fde29788db38.991e5c23-3e9c-4944-b08b-9e83ef0ab598",
+"uaaClientSecret": "mijzqlhrvji83e581krorb5aovbsa1s4a15ob"
+
+PERF tenants:
+"uaaServer": "https://c9e1bc59-b0d9-482f-ba4e-331d4d8ca3f4.predix-uaa.run.aws-usw02-pr.ice.predix.io",
+"uaaClientId": "webapp.38fa6fb0-4949-43e4-876d-7de130cb74b7.d3c0788d-40f2-411b-92f7-3eaf337ec01c",
+"uaaClientSecret": "13u6a346rtvaikv5ib9q53sddx8mjs18f3vi7u"
+
+Unified RC tenant:
+"uaaServer": "https://d1730ade-7c0d-4652-8d44-cb563fcc1e27.predix-uaa.run.aws-usw02-pr.ice.predix.io",
+"uaaClientId": "webapp.496bb641-78b5-4a18-b1b7-fde29788db38.991e5c23-3e9c-4944-b08b-9e83ef0ab598",
+"uaaClientSecret": "mijzqlhrvji83e581krorb5aovbsa1s4a15ob"

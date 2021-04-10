@@ -1,0 +1,37 @@
+<div class="chart-wrapper">
+    <div class="chart-handle">
+        <label>{{ chartObj.title }}</label>
+    </div>
+    <div id="chart_ts"
+         [ngClass]="{ 'overlay': showOverlay || (!chartObj || !chartObj.tags.length) }"
+         class="chart_container"
+         (drop)="drop($event)"
+         (dragover)="dragover($event)"
+         (dragenter)="dragEnter($event)"
+         (dragleave)="dragLeave($event)">
+    <px-vis-timeseries #pxChart
+                       *ngIf="(chartObj && chartObj.tags.length)"
+                       x-axis-config='{}'
+                       y-axis-config='{}'
+                       render-to-canvas
+                       margin='{ "top": "20", "bottom": "25", "left": "80", "right": "80" }'
+                       hard-mute
+                       disable-navigator></px-vis-timeseries>
+<!--<p>{{ chartObj.title }}</p>
+<div id="chart_ts" (drop)="drop($event)"
+     (dragover)="dragover($event)"
+     (dragenter)="dragEnter($event)"
+     (dragleave)="dragLeave($event)"
+     [ngClass]="{
+            'overlay': showOverlay,
+            '': !showOverlay}">
+            <px-vis-timeseries #pxChart
+               x-axis-config='{}'
+               y-axis-config='{}'
+               render-to-canvas
+               margin='{ "top": "20", "bottom": "25", "left": "80", "right": "80" }'
+               hard-mute
+               disable-navigator>
+            </px-vis-timeseries>-->
+</div>
+</div>

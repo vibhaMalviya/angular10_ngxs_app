@@ -1,0 +1,14 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "outDir": "../dist/server",
+    "lib": [
+      "es2017"
+    ],
+    "types" : ["node", "fastify-static"]
+  }
+}

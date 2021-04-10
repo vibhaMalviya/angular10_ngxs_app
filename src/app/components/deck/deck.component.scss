@@ -1,0 +1,39 @@
+@import 'px-colors-settings';
+
+#deckContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.card {
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+.sidePanel {
+    width: 25%;
+    height: 100%;
+    float: right;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background: $gray2;
+    font-size: 1.5rem;
+    overflow: hidden;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    color: $gray20;
+    top: 0px;
+}

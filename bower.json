@@ -1,0 +1,9 @@
+{
+  "name": "apm-analysis-microapp-3",
+  "version": "3.0.0",
+  "private": true,
+  "dependencies": {
+    "px-vis-timeseries": "https://github.com/gedigital-apm/px-vis-timeseries.git#4.0.2",
+    "px-vis": "https://github.com/gedigital-apm/px-vis.git#5.3.11"
+  }
+}

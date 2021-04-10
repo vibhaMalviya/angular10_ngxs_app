@@ -1,0 +1,66 @@
+{
+  "tenant": {
+    "tenancyMode": "single",
+    "singleTenant" : {
+      "id": "local-single-tenant-mode",
+      "uaaServer": "https://d1730ade-7c0d-4652-8d44-cb563fcc1e27.predix-uaa.run.aws-usw02-pr.ice.predix.io",
+      "uaaClientId": "webapp.496bb641-78b5-4a18-b1b7-fde29788db38.991e5c23-3e9c-4944-b08b-9e83ef0ab598",
+      "uaaClientSecret": "mijzqlhrvji83e581krorb5aovbsa1s4a15ob",
+      "configServiceHost": "http://localhost:3001",
+      "route": "localhost",
+      "contextPath": "",
+      "serverURL": "http://localhost:3000",
+      "customHeader": {
+        "tenant": "2bcdb0d5-e95e-4fe5-b97a-1d979abca5d9",
+        "analysisqag": "2bcdb0d5-e95e-4fe5-b97a-1d979abca5d9"
+      }
+    },
+    "hubConfigService": "https://hubs-apphub-config-manager-dev.grc-apps.svc.ice.ge.com"
+  },
+  "config": {
+    "name":"APM",
+    "user": {
+      "name": "Edison1879",
+      "firstName": "Thomas",
+      "lastName": "Edison",
+      "picture": "/ui-hub-assets/images/avatar.jpg",
+      "uuid": "4e96ce38-b07d-4a4e-ae38-d5fd670f4965"
+    },
+	"preferences": {
+	  "preferredLocale": "en-US",
+	  "AssetDisplayName": "GE",
+	  "SmartSignalMarkerConfigTenantPref": {},
+      "SmartSignalMarkerVisibilityUserPref": {}
+	},
+    "apps":[
+      {
+          "id":"analysismicroapp3",
+          "host":"http://localhost:9042",
+          "path":"/analysisV3",
+          "template":"/index.html",
+          "navService":"/nav.json",
+          "default": true
+        },
+        {
+           "id":"analysismicroapp",
+            "host":"https://apm-analysis-ui-rc.int-app.aws-usw02-pr.predix.io",
+            "path":"/analysis",
+            "template":"/index.html",
+            "navService":"/nav/nav.json"
+        },
+        {
+            "id":"Alerts",
+            "host":"https://apm-alarms-v2-ui-rc.int-app.aws-usw02-pr.predix.io",
+            "path":"/alerts",
+            "template":"/index.html",
+            "navService":"/nav/nav.json",
+            "items":[
+              {
+                "label": "Alerts",
+                "icon": "fa-warning",
+                "path": "/alerts/#"
+              }]
+      }
+    ]
+  }
+}

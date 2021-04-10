@@ -1,0 +1,21 @@
+@import "px-colors-settings";
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 1rem;
+}
+
+.cardHeader {
+  background-color: $gray2;
+  height: 30px;
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+.chartSelectorContainer {
+  display: flex;
+  justify-content: center;
+}

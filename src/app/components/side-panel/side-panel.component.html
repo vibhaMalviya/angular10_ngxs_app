@@ -1,0 +1,81 @@
+
+<div class="dx-viewport side-panel">
+        <dx-tree-view
+            #tagTreeView
+            id="tagTreeView"
+            [items]="devexData"
+            [width]="500"
+            displayExpr="label"
+            [searchEnabled]="true"
+            searchMode="contains"
+            itemTemplate="listitem"
+            (onItemClick)="onSelectionClick($event)"
+            (onSelectionChanged)="treeViewSelectionChanged($event)">
+                <div class="items" *dxTemplate="let data of 'listitem'; let index = index">
+                <div draggable="true" (dragstart)="onDragStart($event, data)">
+                    <span *ngFor="let d of data.prefix"><i class="dx-icon fa {{d.icon}}"></i></span>
+                    <span>{{data.label}}</span>
+                    <span *ngFor="let d of data.postfix"><i class="dx-icon fa {{d.icon}}"></i></span>
+                </div>
+                </div>
+    <!--        <div class="items" *dxTemplate="let data of 'listitem'; let index = index">-->
+    <!--                <div><span *ngFor="let d of data.prefix"><i class="dx-icon fa {{d.icon}}"></i></span>-->
+    <!--                <span>{{data.label}}</span>-->
+    <!--                <span *ngFor="let d of data.postfix"><i class="dx-icon fa {{d.icon}}"></i></span>-->
+    <!--                </div>-->
+    <!--        </div>-->
+        </dx-tree-view>
+
+
+    <div class="options">
+        <div class="option">
+            <span>Search mode</span>
+            <dx-select-box
+                #searchMode
+                [items]="['contains', 'startsWith']"
+                [(value)]="tagTreeView.searchMode">
+            </dx-select-box>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="dx-viewport side-panel">
+    <dx-sortable
+            filter=".dx-treeview-node-is-leaf"
+            group="chartsGroup"
+            data="tag-tree-item"
+            dropFeedbackMode="indicate"
+            [allowDropInsideItem]="true"
+            [allowReordering]="false"
+            (onDragEnd)="onDragEnd($event)">
+        <dx-tree-view
+          #treeview
+          id="treeComp"
+          [items]="devexData"
+          displayExpr="label"
+          [searchEnabled]="true"
+          searchMode="contains"
+          itemTemplate="listitem"
+          (onItemClick)="onSelectionClick($event)"
+          (onSelectionChanged)="treeViewSelectionChanged($event)">
+            <div class="items" *dxTemplate="let data of 'listitem'; let index = index">
+                <div><span *ngFor="let d of data.prefix"><i class="dx-icon fa {{d.icon}}"></i></span>
+                    <span>{{data.label}}</span>
+                    <span *ngFor="let d of data.postfix"><i class="dx-icon fa {{d.icon}}"></i></span>
+                </div>
+            </div>
+        </dx-tree-view>
+    </dx-sortable>
+
+    &lt;!&ndash; <div class="options">
+         <div class="option">
+             <span>Search mode</span>
+             <dx-select-box
+                 #searchMode
+                 [items]="['contains', 'startsWith']"
+                 [(value)]="treeview.searchMode">
+             </dx-select-box>
+         </div>
+     </div>&ndash;&gt;
+</div>-->

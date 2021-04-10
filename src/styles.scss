@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import "./app/styles/px-buttons-design.scss";
+@import "./app/styles/px-colors-design.scss";
+@import "./app/styles/px-colors-settings.scss";
+@import "./app/styles/px-defaults-design.scss";
+@import "./app/styles/px-forms-design.scss";
+@import "./app/styles/px-functions-design.scss";
+@import "./app/styles/px-headings-design.scss";
+@import "./app/styles/px-mixins-design.scss";
+@import "./app/styles/px-typography-design.scss";
+@import "./app/styles/px-theme.scss";*/
+@import './bower_components/px-colors-design/settings.colors';
+body {
+  font-family: "GE Inspira Sans", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: $gray18;
+}

@@ -1,0 +1,38 @@
+@import '../../styles/px-colors-settings.scss';
+
+:host {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: #dddddd;
+    color: #ffffff;
+    overflow-y: auto;
+}
+
+.side-panel {
+  height: 100%;
+}
+.pad {
+  padding-right: 25px;
+  padding-left: 5px
+}
+.flex-container {
+    display: flex;
+}
+.dx-draggable-dragging {
+    z-index: 2;
+}
+
+#tagTreeView {
+  background: $gray14;
+  color: $white;
+  font-family: "GE Inspira Sans", Helvetica, Arial, sans-serif;
+}
+
+#treeComp.dx-texteditor.dx-editor-outlined {
+  background: inherit;
+}
+
+#treeComp.dx-texteditor-input {
+  color: white;
+}
