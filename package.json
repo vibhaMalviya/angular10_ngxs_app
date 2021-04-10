@@ -27,7 +27,9 @@
     "e2e": "ng e2e",
     "whichng": "which ng",
     "ngsw": "node_modules/.bin/ngsw-config dist/apm-analysis-microapp-3 ngsw-config.json",
-    "bundle-report": "webpack-bundle-analyzer dist/apm-analysis-microapp-3/stats.json -p 8889"
+    "bundle-report": "webpack-bundle-analyzer dist/apm-analysis-microapp-3/stats.json -p 8889",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "private": true,
   "dependencies": {
